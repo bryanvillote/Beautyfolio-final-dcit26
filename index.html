@@ -4,14 +4,19 @@
     <link rel="stylesheet" href="beauty.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautyfolio: A Cosmetic Catalog</title>
+    <title>Make-up Catalog</title>
     <style>
         body {
             font-family: Montserrat, sans-serif;
             margin: 0;
             padding: 0;
         }
+        #modalProductDescription {
+            margin: 16px;
+            font-size: 16px;
+            line-height: 1.5;
 
+        }
         @media (max-width: 768px) {
             .searchbar {
                 width: 100%;
@@ -198,22 +203,25 @@
     
             function loadProductDescription(productFileName) {
                 var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function (){
+                xhr.onreadystatechange = function () {
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             // Update modal product description
                             document.getElementById('modalProductDescription').innerHTML = xhr.responseText;
                         } else {
                             // Handle error
-                            document.getElementById('modalProductDescription').innerHTML = 'Failed to load description.';
+                            document.getElementById('modalProductDescription').innerHTML = 'Failed to load description. Status: ' + xhr.status;
                         }
                     }
                 };
-                xhr.open('GET', 'descriptions/' + productFileName + '.txt', true);
+            
+                // Use GitHub Pages URL without the 'tree' part
+                xhr.open('GET', 'https://bunakchild.github.io/dcit26try/static/descriptions/' + productFileName + '.txt', true);
                 xhr.send();
+                console.log('Fetching description for: ' + productFileName);
             }
-    
-    
+            
+
             // Close the modal when the close button is clicked
             function closeModal(){
                 modal.style.display = 'none';
