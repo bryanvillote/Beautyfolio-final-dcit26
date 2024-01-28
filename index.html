@@ -230,7 +230,7 @@
                 image.addEventListener('click', function (){
                     var productName = this.parentElement.querySelector('h2').textContent;
                     var productTitle = this.parentElement.querySelector('h3').textContent;
-                    var productFileName = productTitle.replace(/ /g, '_').toLowerCase(); 
+                    var productFileName = productTitle.replace(/ /g, '_'); 
                     var productImageSrc = this.src;
                     openModal(productName, productTitle, '', productImageSrc);
                     loadProductDescription(productFileName); 
