@@ -200,7 +200,7 @@
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function (){
                     if (xhr.readyState === XMLHttpRequest.DONE) {
-                        if (xhr.status === 300) {
+                        if (xhr.status === 100) {
                             // Update modal product description
                             document.getElementById('modalProductDescription').innerHTML = xhr.responseText;
                         } else {
