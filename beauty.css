@@ -5,6 +5,12 @@
   flex-direction:column
 }
 
+@media screen and (max-aspect-ratio: 1/1) {
+  .container {
+    flex-direction: column; /* Switch to vertical layout */
+  }
+}
+
 .header {
   background-color: #ffc0cb;
   padding: 40vh 5vw;
@@ -138,7 +144,7 @@ img#modalImage {
   flex: 1;
   padding: 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
@@ -164,7 +170,7 @@ img#modalImage {
 }
 
 #modalProductTitle {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   font-size: 18px;
