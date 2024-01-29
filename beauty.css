@@ -50,13 +50,30 @@ color: #ffffff;
 }
 
 .nav input[type="text"] {
-  width: 100px;
+  width: 200px;
   padding: 10px;
   border: none;
   border-radius: 8px;
   background-color: #ffffff;
   margin-right: 8px; 
   transition: border-color 0.3s ease;
+}
+
+@media (max-width: 390px) {
+  .searchbar {
+      width: 100%;
+      margin: 1px 1px;
+  }
+  .nav .searchbar input {
+      width: 80%;
+  }
+  .products {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+  .products .product {
+      width: calc(50% - 0.5rem);
+  }
 }
 
 .seachbar {
@@ -72,6 +89,7 @@ color: #ffffff;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 50px;
   padding: 40px;
+  place-items: center;
 }
 
 .product {
@@ -169,7 +187,6 @@ img#modalImage {
   justify-content: center;
   padding: 20px;
   text-align: center;
-
 }
 
 #modalProductName {
@@ -178,7 +195,6 @@ img#modalImage {
   justify-content: center;
   font-size: 25px;
   font-weight: bold;
-
 }
 
 #modalProductTitle {

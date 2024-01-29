@@ -26,6 +26,7 @@
             </div>
         </div>
 
+        <!-- Product Cards -->
         <div class="products">
             <div class="product">
                 <img src="static/blush1.webp" alt="blush">
@@ -163,6 +164,7 @@
         </div>
     </div>
 
+    <!-- Modal for displaying product details -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -227,7 +229,7 @@
                     closeModal();
                 }
             }
-            // To get the image productname, producttitle, and productdescriptions
+            // Event listeners to get the image productname, producttitle, and productdescriptions
             document.querySelectorAll('.product img').forEach(function (image) {
                 image.addEventListener('click', function (){
                     var productName = this.parentElement.querySelector('h2').textContent;
@@ -256,13 +258,13 @@
               })
             };
         
-            // Add an event listener to the search input
+            //Event listener to the search input
             searchInput.addEventListener('input', () => {
               const searchTerm = searchInput.value.toLowerCase()
               filterProducts(searchTerm);
             })
         
-            // Add an event listener to the search submit button (optional)
+            //Event listener to the search submit button (optional)
             searchSubmit.addEventListener('click', (e) =>{
               e.preventDefault()
               const searchTerm = searchInput.value.toLowerCase()
