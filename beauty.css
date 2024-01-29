@@ -14,7 +14,7 @@
 
 .header {
   background-color: #ffc0cb;
-  padding: 40vh;
+  padding: 10vh;
   background-image: url(static/front.jpg);
   background-size: cover;
   background-position: center;
@@ -29,9 +29,14 @@ font-size: 2em;
 z-index: 1000;
 }
 
-.header p {
-  text-align: justify;
-  line-height: 2;
+.about{
+  display: inline;
+}
+
+.about p {
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: none;
 }
 
 .nav {
