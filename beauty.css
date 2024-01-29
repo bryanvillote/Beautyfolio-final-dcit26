@@ -32,7 +32,7 @@ z-index: 1000;
 .header p {
   text-align: justify;
   line-height: 2;
-  z-index: 1000;
+  overflow: auto;
 }
 
 .nav {
