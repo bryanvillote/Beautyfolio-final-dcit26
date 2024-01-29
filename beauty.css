@@ -8,13 +8,13 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
   .container {
-    flex-direction: column; /* Switch to vertical layout */
+    flex-direction: column;
   }
 }
 
 .header {
   background-color: #ffc0cb;
-  padding: 40vh 5vw;
+  padding: 40vh;
   background-image: url(static/front.jpg);
   background-size: cover;
   background-position: center;
