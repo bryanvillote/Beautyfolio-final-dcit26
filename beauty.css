@@ -14,9 +14,11 @@
 
 .header {
   background-color: #ffc0cb;
+  max-width: auto;
+  min-width: 100px;
   padding: 10vh;
   background-image: url(static/front.jpg);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -25,7 +27,7 @@
 .header h1 {
 margin: 0px;
 text-align: center;
-font-size: 8em;
+font-size: 3em;
 z-index: 1000;
 color: #ffffff;
 }
@@ -48,26 +50,13 @@ color: #ffffff;
 }
 
 .nav input[type="text"] {
-  width: 200px;
+  width: 100px;
   padding: 10px;
   border: none;
   border-radius: 8px;
   background-color: #ffffff;
   margin-right: 8px; 
   transition: border-color 0.3s ease;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #ffdfe2;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff8599;
 }
 
 .seachbar {
